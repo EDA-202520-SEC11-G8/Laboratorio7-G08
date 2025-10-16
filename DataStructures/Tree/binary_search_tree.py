@@ -4,6 +4,7 @@ def new_map():
         Crea un nuevo arbol
     """
     return {"root":None}
+
 def insert_node(root, key, value):
     """
         Insert a new node in the tree
@@ -48,3 +49,13 @@ def get (my_bst, key):
     if node is None:
         return None
     return bn.get_value(node)
+
+def size(my_bst):
+    """Retorna el número de elementos en el árbol."""
+    return size_tree(my_bst["root"])
+
+def size_tree(root):
+    """Cuenta los nodos desde un nodo dado."""
+    if root is None:
+        return 0
+    return 1 + size_tree(root["left"]) + size_tree(root["right"])
