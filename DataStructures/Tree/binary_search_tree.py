@@ -4,9 +4,6 @@ def new_map():
         Crea un nuevo arbol
     """
     return {"root":None}
-
-    
-    
 def insert_node(root, key, value):
     """
         Insert a new node in the tree
