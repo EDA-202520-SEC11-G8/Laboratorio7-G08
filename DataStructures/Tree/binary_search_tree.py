@@ -42,7 +42,9 @@ def get_node(root, key):
 
 def get (my_bst, key):
     
-    if my_bst["root"] is not None:
+    if my_bst["root"] is None:
         return None
     node = get_node(my_bst["root"], key)
+    if node is None:
+        return None
     return bn.get_value(node)
