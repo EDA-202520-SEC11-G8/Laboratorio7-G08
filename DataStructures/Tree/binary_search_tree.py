@@ -51,11 +51,21 @@ def get (my_bst, key):
     return bn.get_value(node)
 
 def size(my_bst):
-    """Retorna el número de elementos en el árbol."""
+    """
+    Retorna el número de elementos en el árbol.
+    """
     return size_tree(my_bst["root"])
 
 def size_tree(root):
-    """Cuenta los nodos desde un nodo dado."""
+    """
+    Cuenta los nodos desde un nodo dado.
+    """
     if root is None:
         return 0
     return 1 + size_tree(root["left"]) + size_tree(root["right"])
+
+def is_empty(my_bst):
+    """ 
+    Retorna True si el arbol está vacio, False si tiene nodos
+    """
+    return size(my_bst)==0
